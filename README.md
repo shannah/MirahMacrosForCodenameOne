@@ -16,7 +16,7 @@ NetBeans with the [Codename One plugin](http://www.codenameone.com) and the [Mir
 
 ##Installation in Codename One Projects
 
-1. Download the latest [MirahMacrosForCN1-macros.jar](#foo) file.
+1. Download the latest [MirahMacrosForCN1-macros.jar](https://github.com/shannah/MirahMacrosForCodenameOne/releases/tag/0.1.0) file.
 2. Copy this jar file into the `lib/mirah/macros` directory of your Codename One project.
 
 ##Example Usage:
