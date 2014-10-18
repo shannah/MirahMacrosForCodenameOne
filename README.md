@@ -83,6 +83,16 @@ class FacultyMember implements Externalizable {
   private double weight;
   private FacultyMember child;
   
+  public FacultyMember(){
+  
+  }
+  
+  public FacultyMember(String name, int age, double weight){
+    this.name = name;
+    this.age = age;
+    this.weight = weight;
+  }
+  
   public String name(){ return name;}
   public int age(){ return age;}
   public double weight(){ return weight;}
@@ -110,6 +120,8 @@ class FacultyMember implements Externalizable {
     weight = input.readDouble();
     child = (FacultyMember)Util.readObject(input);
   }
+  
+  
   
 
 ~~~
