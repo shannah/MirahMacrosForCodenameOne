@@ -126,6 +126,14 @@ class FacultyMember implements Externalizable {
 
 ~~~
 
+##See Also
+
+For more information about Codename One persistence and the Externalizable interface check out:
+
+1. A [blog post](http://sjhannah.com/blog/?p=234) I wrote on a the topic a while back.
+2. [Store Data to Codename One Persistent Storage](https://www.youtube.com/watch?v=Q85K-nSbc_k) youtube video/screencast.
+3. [The Codename One Developer Guide](http://www.codenameone.com/developer-guide.html)
+
 ##Credits
 
 This project was created and is maintained by [Steve Hannah](http://sjhannah.com)
