@@ -26,12 +26,7 @@ package ca.weblite.codename1.ws
 
 import com.codename1.io.Externalizable
 
-/**
- *
- * @author shannah
- */
 class FacultyMember implements Externalizable
-  
   
   attr_externalizable 1, 'FacultyMember',
     name:String,
@@ -39,11 +34,8 @@ class FacultyMember implements Externalizable
     weight:double,
     child:FacultyMember
   
+  def initialize; end
   
-  def initialize
-  
-  end
-
 end
 ~~~
 
@@ -67,10 +59,6 @@ import java.io.DataOutputStream;
 import java.io.DataInputStream;
 import com.codename1.io.Util;
 
-/**
- *
- * @author shannah
- */
 class FacultyMember implements Externalizable {
   
   private String name;
@@ -81,7 +69,6 @@ class FacultyMember implements Externalizable {
   public FacultyMember(){
   
   }
-  
   
   public String name(){ return name;}
   public int age(){ return age;}
@@ -111,9 +98,6 @@ class FacultyMember implements Externalizable {
     child = (FacultyMember)Util.readObject(input);
   }
   
-  
-  
-
 ~~~
 
 ##See Also
