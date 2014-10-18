@@ -41,12 +41,7 @@ class FacultyMember implements Externalizable
   
   
   def initialize
-  end
   
-  def initialize(name:String, age:int, weight:double)
-    @name=name
-    @age=age
-    @weight=weight
   end
 
 end
@@ -87,11 +82,6 @@ class FacultyMember implements Externalizable {
   
   }
   
-  public FacultyMember(String name, int age, double weight){
-    this.name = name;
-    this.age = age;
-    this.weight = weight;
-  }
   
   public String name(){ return name;}
   public int age(){ return age;}
