@@ -1,10 +1,10 @@
 #Mirah Macros for Codename One
 
-This project includes macros that are helpful for Codename One projects.  The plan is to try to wrap as much common boiler-plate into macros so that developing Codename One apps will involve less typing.
+This project includes macros that are helpful for [Codename One](http://www.codenameone.com) projects.  The plan is to try to wrap as much common boiler-plate into macros so that developing Codename One apps will involve less typing.
 
 Currently there is only one macro implemented:
 
-`attr_externalizable` - A macro that allows you to generate Codename One classes that implement the `Externalizable` interface (i.e. can be persisted in Storage and used in web services).
+`attr_externalizable` - A macro that allows you to generate Codename One classes that implement the [`Externalizable`](https://codenameone.googlecode.com/svn/trunk/CodenameOne/javadoc/com/codename1/io/Externalizable.html) interface (i.e. can be persisted in Storage and used in web services).
 
 ##License
 
