@@ -69,6 +69,11 @@ class ExternalizableMacros
         nil
       end
       
+      isArrayType=false
+      if e.value.kind_of? TypeName
+        isArrayType = TypeName(e.value).typeref.isArray
+      end
+      
       #writeMethodName = SimpleString.new 'writeInt'
       if writeMethodName 
         line = quote do
@@ -125,8 +130,14 @@ class ExternalizableMacros
           `"#{name}_set"` input.`readMethodName`
         end
       elsif isArrayType
+        tmp = gensym
         line = quote do
-          `"#{name}_set"` `e.value`.cast(Util.readObject(input))
+          `tmp` = Object[].cast(Util.readObject(input))
+          if `tmp` == nil
+            `"#{name}_set"` nil
+          else
+            `"#{name}_set"` Arrays.asList(`tmp`).toArray(`type`[0])
+          end
         end
       elsif 'String'.equals type
         line = quote do
@@ -147,6 +158,7 @@ class ExternalizableMacros
     out.add quote { import java.io.DataInputStream }
     out.add quote { import java.io.DataOutputStream }
     out.add quote { import com.codename1.io.Util }
+    out.add quote { import java.util.Arrays }
     out.add getVersion
     out.add getObjectId
     out.add externalize
