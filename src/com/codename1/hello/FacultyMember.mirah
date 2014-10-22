@@ -19,7 +19,8 @@ class FacultyMember implements Externalizable
     name:String,
     age:int, 
     weight:double,
-    child:FacultyMember
+    child:FacultyMember,
+    children:FacultyMember[]
   
   
   def initialize
