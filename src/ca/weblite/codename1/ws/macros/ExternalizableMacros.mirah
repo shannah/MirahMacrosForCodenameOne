@@ -144,8 +144,11 @@ class ExternalizableMacros
           `"#{name}_set"` Util.readUTF(input)
         end
       else
+        tmp = Cast.new(@call.position, TypeName(e.value), quote{Util.readObject(input)}) 
         line = quote do
-          `"#{name}_set"` `type`.class.cast(Util.readObject(input))
+          #`"#{name}_set"` `type`.class.cast(Util.readObject(input))
+          
+          `"#{name}_set"` `tmp`
         end
       end
       internalizeBody.add line
